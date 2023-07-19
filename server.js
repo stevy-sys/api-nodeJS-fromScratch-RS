@@ -30,6 +30,10 @@ app.get("/jwtid", requireAuth, (req, res) => {
   res.status(200).send(res.locals.user._id);
 });
 
+app.get("/test", (req, res) => {
+  res.status(200).send({coucou:'hello world'});
+});
+
 // routes
 // app.use("/api/user", userRoutes);
 // app.use("/api/post", postRoutes);
